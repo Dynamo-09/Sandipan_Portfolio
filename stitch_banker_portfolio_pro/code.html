@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Senior Bank Employee Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#fdfbf0",
+                        "on-primary-fixed": "#0f172a",
+                        "inverse-primary": "#cbd5e1",
+                        "on-secondary-container": "#475569",
+                        "background": "#fdfbf0", /* Creamy off-white from IMAGE_2 */
+                        "surface-container-low": "#f9f7e8",
+                        "secondary-fixed-dim": "#94a3b8",
+                        "surface-container-highest": "#f4f1db",
+                        "outline-variant": "#e2e8f0",
+                        "inverse-surface": "#1e293b",
+                        "on-primary": "#ffffff",
+                        "error": "#b91c1c",
+                        "on-tertiary-fixed": "#0f172a",
+                        "surface-variant": "#f4f1db",
+                        "error-container": "#fee2e2",
+                        "primary-fixed-dim": "#94a3b8",
+                        "secondary-fixed": "#e2e8f0",
+                        "primary-fixed": "#f1f5f9",
+                        "on-surface": "#0f172a", /* Deep navy/charcoal */
+                        "surface": "#fdfbf0",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f8fafc",
+                        "on-secondary-fixed-variant": "#334155",
+                        "tertiary-container": "#1e293b",
+                        "secondary": "#475569",
+                        "on-primary-fixed-variant": "#1e293b",
+                        "on-background": "#0f172a",
+                        "tertiary-fixed": "#e2e8f0",
+                        "on-secondary-fixed": "#0f172a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#334155",
+                        "on-tertiary-fixed-variant": "#1e293b",
+                        "primary": "#0f172a",
+                        "surface-bright": "#fdfbf0",
+                        "secondary-container": "#f1f5f9",
+                        "surface-container-high": "#efead1",
+                        "tertiary-fixed-dim": "#64748b",
+                        "on-error": "#ffffff",
+                        "tertiary": "#000000",
+                        "surface-dim": "#e2e8f0",
+                        "primary-container": "#0f172a",
+                        "on-error-container": "#7f1d1d",
+                        "outline": "#94a3b8",
+                        "on-primary-container": "#cbd5e1",
+                        "surface-tint": "#0f172a",
+                        "on-tertiary-container": "#334155"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "stack-lg": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "display": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "32px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "26px", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    },
+                    "boxShadow": {
+                        "premium": "0 10px 40px -10px rgba(15, 23, 42, 0.05), 0 4px 10px -4px rgba(15, 23, 42, 0.03)",
+                        "premium-hover": "0 20px 50px -10px rgba(15, 23, 42, 0.08), 0 8px 20px -8px rgba(15, 23, 42, 0.04)",
+                        "premium-dark": "0 10px 40px -10px rgba(0,0,0,0.4), 0 4px 10px -4px rgba(0,0,0,0.2)",
+                        "premium-dark-hover": "0 20px 50px -10px rgba(0,0,0,0.6), 0 8px 20px -8px rgba(0,0,0,0.3)",
+                        "glow": "0 0 20px rgba(15, 23, 42, 0.1)",
+                        "glow-dark": "0 0 20px rgba(218, 226, 253, 0.4)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .global-gradient-mesh {
+            background: radial-gradient(circle at 15% 50%, rgba(203, 213, 225, 0.2), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(239, 234, 209, 0.4), transparent 25%);
+            background-color: #fdfbf0; /* Creamy off-white background */
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .dark .global-gradient-mesh {
+            background: radial-gradient(circle at 15% 50%, rgba(30,41,59,0.3), transparent 25%),
+                        radial-gradient(circle at 85% 30%, rgba(15,23,42,0.5), transparent 25%);
+            background-color: #020617;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .glass-card {
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(15, 23, 42, 0.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        .dark .glass-card {
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(15, 23, 42, 0.6);
+        }
+
+        .glowing-node {
+            box-shadow: 0 0 10px rgba(15, 23, 42, 0.1);
+            transition: all 0.3s ease;
+        }
+        .dark .glowing-node {
+            box-shadow: 0 0 15px rgba(218, 226, 253, 0.4);
+        }
+        .group:hover .glowing-node {
+            box-shadow: 0 0 20px rgba(15, 23, 42, 0.2);
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="global-gradient-mesh text-on-background dark:text-slate-100 min-h-screen font-body-md transition-colors duration-300 antialiased selection:bg-slate-200 selection:text-on-background">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full glass-card z-50 shadow-sm transition-all duration-300 border-b-0 bg-white/40 dark:bg-slate-900/40">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-[24px] font-bold text-on-surface dark:text-slate-100 tracking-tight italic">
+                Executive Portfolio
+            </div>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-primary dark:text-slate-100 border-b-2 border-primary dark:border-slate-100 pb-1 cursor-pointer active:opacity-70 transition-colors duration-200" href="#expertise">Profile</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-slate-100 transition-colors duration-200 cursor-pointer active:opacity-70" href="#career">Career</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-slate-100 transition-colors duration-200 cursor-pointer active:opacity-70" href="#skills">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-slate-100 transition-colors duration-200 cursor-pointer active:opacity-70" href="#certifications">Credentials</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-slate-400 hover:text-primary dark:hover:text-slate-100 transition-colors duration-200 cursor-pointer active:opacity-70" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="p-2.5 rounded-full hover:bg-surface-variant/50 dark:hover:bg-slate-800/50 transition-colors text-primary dark:text-slate-100" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="light_mode">light_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-20 pb-40">
+<!-- Hero Section -->
+<section class="relative w-full min-h-[85vh] flex items-center justify-center overflow-hidden" id="expertise">
+<!-- Immersive Background -->
+<div class="absolute inset-0 z-0">
+<img alt="Corporate Office" class="w-full h-full object-cover object-center opacity-30 dark:opacity-20" src="https://lh3.googleusercontent.com/aida/AP1WRLvYpzaqYkKU64tQ9LSwCQEvJZ9-nfhjLtwbutMYeE-Lh6-XWcaBz8DMzmNkNMDhfY0EJPGoYAc_wNh8Xz5ANC1ohd657sHGW90Si9I9cYbJWxbszqJOuW1XBorf-oo7-Nky7eGibQiaYR3xh9kcFABQflr5u8Uw1XUvnzkm1RbYwMR78CD1kMbQXPjPp1iQmp0Z3n2x91wrSXfJuuUfTrg1aORany_HLSD0Qsq6xHInGGF_4y7a8V74CAI"/>
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background dark:from-slate-950/40 dark:via-slate-950/80 dark:to-slate-950"></div>
+</div>
+<div class="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center reveal active pt-12 pb-24">
+<div class="lg:col-span-7 flex flex-col gap-8 text-center lg:text-left order-2 lg:order-1 glass-card p-10 lg:p-14 rounded-3xl bg-white/60 dark:bg-slate-900/60 shadow-premium dark:shadow-premium-dark backdrop-blur-2xl border-white/60 dark:border-white/10">
+<h1 class="font-display text-[48px] md:text-display text-on-surface dark:text-slate-100 leading-[1.1]">
+                Senior Bank Manager <br/>
+<span class="italic font-light text-on-surface-variant dark:text-slate-300">&amp; Risk Specialist</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-slate-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                A seasoned banking professional with over a decade of experience driving institutional stability through rigorous risk assessment, fraud prevention, and strategic operational leadership. 
+            </p>
+<div class="flex flex-wrap justify-center lg:justify-start gap-stack-md pt-4">
+<a class="inline-flex items-center justify-center h-14 px-10 rounded-xl bg-on-surface text-background dark:bg-slate-100 dark:text-slate-900 font-label-md text-[16px] font-semibold hover:opacity-90 transition-all shadow-premium hover:shadow-premium-hover hover:-translate-y-1 cursor-pointer" href="#contact">
+                    Contact Me
+                </a>
+<a class="inline-flex items-center justify-center h-14 px-10 rounded-xl glass-card bg-white/50 dark:bg-slate-800/40 text-on-surface dark:text-slate-100 font-label-md text-[16px] font-semibold hover:bg-white/70 dark:hover:bg-slate-700/70 transition-all shadow-sm hover:shadow-md hover:-translate-y-1 cursor-pointer border-white/40 dark:border-white/5" href="#career">
+                    View Timeline
+                </a>
+</div>
+</div>
+<div class="lg:col-span-5 relative flex justify-center lg:justify-end order-1 lg:order-2">
+<div class="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[550px] rounded-[2rem] overflow-hidden shadow-premium dark:shadow-premium-dark border-[8px] border-white/60 dark:border-slate-800/50 glass-card z-10 transition-transform duration-700 ease-out hover:scale-[1.02] transform rotate-2 hover:rotate-0">
+<img alt="Corporate Headshot" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AP1WRLsDPI19gfbxw637bLSbBH517m8h7IoKeBv-qq1kjcJp5ZAUuRffd7KxicPEqB7YeVJ4Qz2FFSFyRn_qLBHNnOQcL7FLg39s3qJrsYdl2e_hL09P0coKjDVlI8HGsJPr4PSqBS3gNlSghYFuSRpQBjzzkKp7lnIUKML4pl5QHY9pFM86oy1sVvkGpauSciszpMpaK6ecwClYhnKSmTKWqKTJhhedB8sXVoegu1bPRYMoezO59Ldfr_mbP2c"/>
+<div class="absolute inset-0 ring-1 ring-inset ring-black/5 dark:ring-white/10 rounded-[1.5rem]"></div>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-surface-container-high/40 dark:bg-slate-700/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 reveal relative">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 items-center">
+<div class="lg:col-span-6 relative z-10">
+<div class="glass-card bg-white/40 dark:bg-slate-900/50 p-12 rounded-[2.5rem] shadow-premium dark:shadow-premium-dark border-white/60 dark:border-white/10 relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-surface-container-high/30 dark:bg-slate-800/50 rounded-full blur-3xl -z-10"></div>
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-white/80 dark:bg-slate-800/80 glass-card border border-white/60 dark:border-white/10 shadow-sm mb-8">
+<span class="material-symbols-outlined text-[40px] text-on-surface dark:text-slate-100" data-icon="shield_person">shield_person</span>
+</div>
+<h2 class="font-display text-headline-lg text-on-surface dark:text-slate-100 mb-6 leading-tight">Steadfast Under Pressure</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant dark:text-slate-300 leading-relaxed">
+                    Operating at the intersection of regulatory compliance and operational efficiency. Proven track record in navigating complex financial landscapes while maintaining asset quality and mitigating systemic risks. Dedicated to upholding the highest standards of integrity in modern corporate banking.
+                </p>
+</div>
+</div>
+<!-- Humor Badge -->
+<div class="lg:col-span-5 lg:col-start-8 flex justify-center lg:justify-end -mt-16 lg:mt-32 relative z-20">
+<div class="w-full max-w-md p-10 glass-card bg-white/60 dark:bg-slate-800/80 rounded-3xl border-white/60 dark:border-white/10 shadow-premium dark:shadow-premium-dark relative overflow-hidden group hover:-translate-y-2 hover:border-on-surface/20 dark:hover:border-slate-400/40 transition-all duration-500 transform lg:-translate-x-12">
+<div class="absolute inset-0 bg-gradient-to-br from-on-surface/5 to-transparent dark:from-slate-100/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="flex items-start gap-6 relative z-10">
+<div class="p-5 bg-white/60 dark:bg-slate-700/60 rounded-2xl glass-card shadow-sm border-white/40">
+<span class="material-symbols-outlined text-[44px] text-on-surface dark:text-slate-100" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<div class="font-display text-[24px] font-bold text-on-surface dark:text-slate-100 mb-2">IPMC Certificate</div>
+<div class="font-body-md text-[18px] text-on-surface-variant dark:text-slate-300 font-semibold">Immense Patience Mota Chamra*</div>
+<div class="text-[14px] text-outline dark:text-slate-500 mt-4 italic leading-snug border-t border-on-surface/5 dark:border-white/5 pt-4">*Essential requirement for Indian Banking Sector survival.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Timeline -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32 reveal" id="career">
+<div class="mb-24 text-center lg:text-left">
+<h2 class="font-display text-[56px] text-on-surface dark:text-slate-100 tracking-tight leading-none">Career Trajectory</h2>
+<p class="font-body-lg text-[22px] text-on-surface-variant dark:text-slate-400 mt-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">A progressive journey through key operational and risk domains, demonstrating consistent growth and expanding institutional impact.</p>
+</div>
+<div class="relative ml-4 md:ml-12 space-y-24">
+<!-- Timeline Line -->
+<div class="absolute left-[11px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-on-surface via-on-surface/20 to-transparent dark:from-slate-100 dark:via-slate-500/30"></div>
+<!-- Node 1 -->
+<div class="relative pl-12 md:pl-24 group">
+<div class="absolute w-6 h-6 rounded-full bg-on-surface dark:bg-slate-100 left-0 top-2 border-[4px] border-background dark:border-slate-950 glowing-node z-10"></div>
+<div class="glass-card bg-white/30 dark:bg-slate-900/40 p-8 rounded-3xl border-white/50 dark:border-white/5 hover:bg-white/50 dark:hover:bg-slate-800/60 transition-all duration-300 shadow-premium">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+<h3 class="font-headline-md text-[28px] text-on-surface dark:text-slate-100 group-hover:opacity-80 transition-opacity">SME Cell Head, Chief Manager</h3>
+<span class="inline-flex font-label-sm text-[14px] font-bold text-on-surface dark:text-slate-900 bg-on-surface/5 dark:bg-slate-100 px-5 py-2.5 rounded-full border border-on-surface/10 dark:border-slate-200 glass-card uppercase tracking-widest shadow-sm">2026 - Present</span>
+</div>
+<p class="font-body-lg text-[18px] text-on-surface-variant dark:text-slate-300 max-w-4xl leading-relaxed">Directing regional SME credit portfolios, ensuring robust asset quality, and driving strategic growth within acceptable risk parameters. Leading a team of credit analysts to optimize turnaround times.</p>
+</div>
+</div>
+<!-- Nodes with consistent styling -->
+<div class="relative pl-12 md:pl-24 group">
+<div class="absolute w-5 h-5 rounded-full bg-on-surface/30 dark:bg-slate-700 left-[2px] top-3 border-[4px] border-background dark:border-slate-950 transition-all duration-300 group-hover:bg-on-surface dark:group-hover:bg-slate-300 group-hover:glowing-node z-10"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+<h3 class="font-title-lg text-[24px] text-on-surface dark:text-slate-100 transition-colors">Branch Head, Chief Manager</h3>
+<span class="inline-flex font-label-sm text-[13px] text-on-surface-variant dark:text-slate-300 bg-white/40 dark:bg-slate-800/50 px-4 py-2 rounded-full border border-on-surface/5 dark:border-white/5 glass-card tracking-wider">2025 - 2026</span>
+</div>
+<p class="font-body-md text-[17px] text-on-surface-variant dark:text-slate-400 max-w-3xl leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Oversaw comprehensive branch operations, balancing aggressive business targets with strict adherence to compliance and regulatory frameworks.</p>
+</div>
+<div class="relative pl-12 md:pl-24 group">
+<div class="absolute w-5 h-5 rounded-full bg-on-surface/30 dark:bg-slate-700 left-[2px] top-3 border-[4px] border-background dark:border-slate-950 transition-all duration-300 group-hover:bg-on-surface dark:group-hover:bg-slate-300 group-hover:glowing-node z-10"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+<h3 class="font-title-lg text-[24px] text-on-surface dark:text-slate-100 transition-colors">Risk Management Officer, Senior Manager</h3>
+<span class="inline-flex font-label-sm text-[13px] text-on-surface-variant dark:text-slate-300 bg-white/40 dark:bg-slate-800/50 px-4 py-2 rounded-full border border-on-surface/5 dark:border-white/5 glass-card tracking-wider">2020 - 2025</span>
+</div>
+<p class="font-body-md text-[17px] text-on-surface-variant dark:text-slate-400 max-w-3xl leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Implemented enterprise-wide risk management (ERM) strategies. Conducted stress testing and monitored early warning signals (EWS).</p>
+</div>
+<div class="relative pl-12 md:pl-24 group">
+<div class="absolute w-5 h-5 rounded-full bg-on-surface/30 dark:bg-slate-700 left-[2px] top-3 border-[4px] border-background dark:border-slate-950 transition-all duration-300 group-hover:bg-on-surface dark:group-hover:bg-slate-300 group-hover:glowing-node z-10"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+<h3 class="font-title-lg text-[24px] text-on-surface dark:text-slate-100 transition-colors">Credit Officer, Manager</h3>
+<span class="inline-flex font-label-sm text-[13px] text-on-surface-variant dark:text-slate-300 bg-white/40 dark:bg-slate-800/50 px-4 py-2 rounded-full border border-on-surface/5 dark:border-white/5 glass-card tracking-wider">2018 - 2020</span>
+</div>
+<p class="font-body-md text-[17px] text-on-surface-variant dark:text-slate-400 max-w-3xl leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Specialized in credit appraisal for large corporate accounts, focusing on financial modeling and ratio analysis.</p>
+</div>
+<div class="relative pl-12 md:pl-24 group">
+<div class="absolute w-5 h-5 rounded-full bg-on-surface/30 dark:bg-slate-700 left-[2px] top-3 border-[4px] border-background dark:border-slate-950 transition-all duration-300 group-hover:bg-on-surface dark:group-hover:bg-slate-300 group-hover:glowing-node z-10"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4 opacity-80 group-hover:opacity-100 transition-opacity">
+<h3 class="font-title-lg text-[24px] text-on-surface dark:text-slate-100 transition-colors">Branch Head (Rural), Officer</h3>
+<span class="inline-flex font-label-sm text-[13px] text-on-surface-variant dark:text-slate-300 bg-white/40 dark:bg-slate-800/50 px-4 py-2 rounded-full border border-on-surface/5 dark:border-white/5 glass-card tracking-wider">2017 - 2018</span>
+</div>
+<p class="font-body-md text-[17px] text-on-surface-variant dark:text-slate-400 max-w-3xl leading-relaxed opacity-80 group-hover:opacity-100 transition-opacity">Managed rural banking operations, focusing on financial inclusion initiatives and agricultural credit disbursement.</p>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="py-32 reveal relative" id="skills">
+<div class="absolute inset-0 bg-white/10 dark:bg-slate-900/30 glass-card border-y border-on-surface/5 dark:border-white/5 -z-10"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-24 text-center">
+<h2 class="font-display text-[56px] text-on-surface dark:text-slate-100 tracking-tight leading-none">Core Competencies</h2>
+<p class="font-body-lg text-[22px] text-on-surface-variant dark:text-slate-400 mt-6 max-w-2xl mx-auto leading-relaxed font-light">Specialized expertise refined over a decade in tier-one financial institutions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="p-10 rounded-[2rem] glass-card bg-white/30 dark:bg-slate-800/40 border-white/60 dark:border-white/10 shadow-premium hover:shadow-premium-hover hover:-translate-y-3 hover:bg-white/50 dark:hover:bg-slate-700/60 transition-all duration-500 group">
+<div class="w-16 h-16 rounded-2xl bg-white/80 dark:bg-slate-700 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[32px] text-on-surface dark:text-slate-100" data-icon="monitoring">monitoring</span>
+</div>
+<h3 class="font-display text-[28px] text-on-surface dark:text-slate-100 mb-6">Risk Management</h3>
+<ul class="space-y-4 font-body-md text-[16px] text-on-surface-variant dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Enterprise Risk (ERM)</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Credit Appraisal</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Stress Testing &amp; EWS</li>
+</ul>
+</div>
+<div class="p-10 rounded-[2rem] glass-card bg-white/30 dark:bg-slate-800/40 border-white/60 dark:border-white/10 shadow-premium hover:shadow-premium-hover hover:-translate-y-3 hover:bg-white/50 dark:hover:bg-slate-700/60 transition-all duration-500 group mt-0 lg:mt-12">
+<div class="w-16 h-16 rounded-2xl bg-white/80 dark:bg-slate-700 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[32px] text-on-surface dark:text-slate-100" data-icon="policy">policy</span>
+</div>
+<h3 class="font-display text-[28px] text-on-surface dark:text-slate-100 mb-6">Fraud Prevention</h3>
+<ul class="space-y-4 font-body-md text-[16px] text-on-surface-variant dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> AML &amp; KYC Compliance</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Transaction Monitoring</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Internal Audits</li>
+</ul>
+</div>
+<div class="p-10 rounded-[2rem] glass-card bg-white/30 dark:bg-slate-800/40 border-white/60 dark:border-white/10 shadow-premium hover:shadow-premium-hover hover:-translate-y-3 hover:bg-white/50 dark:hover:bg-slate-700/60 transition-all duration-500 group">
+<div class="w-16 h-16 rounded-2xl bg-white/80 dark:bg-slate-700 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[32px] text-on-surface dark:text-slate-100" data-icon="account_balance">account_balance</span>
+</div>
+<h3 class="font-display text-[28px] text-on-surface dark:text-slate-100 mb-6">Operations</h3>
+<ul class="space-y-4 font-body-md text-[16px] text-on-surface-variant dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Branch Management</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Process Optimization</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Regulatory Reporting</li>
+</ul>
+</div>
+<div class="p-10 rounded-[2rem] glass-card bg-white/30 dark:bg-slate-800/40 border-white/60 dark:border-white/10 shadow-premium hover:shadow-premium-hover hover:-translate-y-3 hover:bg-white/50 dark:hover:bg-slate-700/60 transition-all duration-500 group mt-0 lg:mt-12">
+<div class="w-16 h-16 rounded-2xl bg-white/80 dark:bg-slate-700 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform shadow-sm">
+<span class="material-symbols-outlined text-[32px] text-on-surface dark:text-slate-100" data-icon="groups">groups</span>
+</div>
+<h3 class="font-display text-[28px] text-on-surface dark:text-slate-100 mb-6">Leadership</h3>
+<ul class="space-y-4 font-body-md text-[16px] text-on-surface-variant dark:text-slate-400">
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Team Mentoring</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Stakeholder Management</li>
+<li class="flex items-start gap-3"><span class="text-on-surface/50 dark:text-slate-500 mt-1 text-sm">•</span> Strategic Planning</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section class="py-32 reveal" id="certifications">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-24 text-center lg:text-left flex flex-col lg:flex-row justify-between items-end gap-8">
+<div>
+<h2 class="font-display text-[56px] text-on-surface dark:text-slate-100 tracking-tight leading-none">Certifications</h2>
+<p class="font-body-lg text-[22px] text-on-surface-variant dark:text-slate-400 mt-6 max-w-2xl leading-relaxed font-light">Continuous professional development validating deep domain knowledge.</p>
+</div>
+<span class="material-symbols-outlined text-[80px] text-on-surface/10 dark:text-slate-100/10 hidden lg:block" data-icon="school">school</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="p-8 rounded-3xl glass-card bg-white/40 dark:bg-slate-900/40 border-white/60 dark:border-white/10 flex flex-col gap-6 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 hover:bg-white/60 transition-all duration-300">
+<div class="flex justify-between items-center">
+<span class="inline-block px-4 py-2 rounded-full bg-on-surface/5 dark:bg-slate-800 font-label-sm text-[12px] font-bold text-on-surface dark:text-slate-300 tracking-widest uppercase">2025</span>
+<span class="material-symbols-outlined text-on-surface/30 dark:text-slate-500" data-icon="verified">verified</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface dark:text-slate-100 leading-snug">Risk in Financial Services Level 1</h3>
+</div>
+<div class="p-8 rounded-3xl glass-card bg-white/40 dark:bg-slate-900/40 border-white/60 dark:border-white/10 flex flex-col gap-6 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 hover:bg-white/60 transition-all duration-300">
+<div class="flex justify-between items-center">
+<span class="inline-block px-4 py-2 rounded-full bg-on-surface/5 dark:bg-slate-800 font-label-sm text-[12px] font-bold text-on-surface dark:text-slate-300 tracking-widest uppercase">2023</span>
+<span class="material-symbols-outlined text-on-surface/30 dark:text-slate-500" data-icon="gavel">gavel</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface dark:text-slate-100 leading-snug">Financial Risk and Regulation - GARP</h3>
+</div>
+<div class="p-8 rounded-3xl glass-card bg-white/40 dark:bg-slate-900/40 border-white/60 dark:border-white/10 flex flex-col gap-6 shadow-premium hover:shadow-premium-hover hover:-translate-y-2 hover:bg-white/60 transition-all duration-300">
+<div class="flex justify-between items-center">
+<span class="inline-block px-4 py-2 rounded-full bg-on-surface/5 dark:bg-slate-800 font-label-sm text-[12px] font-bold text-on-surface dark:text-slate-300 tracking-widest uppercase">2020</span>
+<span class="material-symbols-outlined text-on-surface/30 dark:text-slate-500" data-icon="menu_book">menu_book</span>
+</div>
+<h3 class="font-headline-md text-[24px] text-on-surface dark:text-slate-100 leading-snug">Executive Certificate in Banking &amp; Finance - IIM Calcutta</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-40 reveal" id="contact">
+<div class="max-w-5xl mx-auto glass-card bg-white/60 dark:bg-slate-900/60 p-10 md:p-20 rounded-[3rem] border-white/60 dark:border-white/10 shadow-premium relative overflow-hidden">
+<div class="absolute -top-32 -right-32 w-96 h-96 bg-surface-container-high/30 dark:bg-slate-800/40 rounded-full blur-3xl -z-10"></div>
+<div class="mb-16 text-center">
+<h2 class="font-display text-[56px] text-on-surface dark:text-slate-100 tracking-tight leading-none">Get in Touch</h2>
+<p class="font-body-lg text-[20px] text-on-surface-variant dark:text-slate-400 mt-6 leading-relaxed font-light">Reach out for consultations, board advisory, or career opportunities.</p>
+</div>
+<form class="flex flex-col gap-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-3">
+<label class="font-label-md text-[14px] font-semibold text-on-surface dark:text-slate-200 tracking-wide uppercase">Full Name</label>
+<input class="rounded-2xl border-on-surface/10 focus:border-on-surface focus:ring-1 focus:ring-on-surface dark:border-white/10 bg-white/40 dark:bg-slate-950/60 dark:text-slate-100 p-5 transition-all duration-300 shadow-sm glass-card" placeholder="Jane Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label-md text-[14px] font-semibold text-on-surface dark:text-slate-200 tracking-wide uppercase">Email Address</label>
+<input class="rounded-2xl border-on-surface/10 focus:border-on-surface focus:ring-1 focus:ring-on-surface dark:border-white/10 bg-white/40 dark:bg-slate-950/60 dark:text-slate-100 p-5 transition-all duration-300 shadow-sm glass-card" placeholder="jane@example.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<label class="font-label-md text-[14px] font-semibold text-on-surface dark:text-slate-200 tracking-wide uppercase">Message</label>
+<textarea class="rounded-2xl border-on-surface/10 focus:border-on-surface focus:ring-1 focus:ring-on-surface dark:border-white/10 bg-white/40 dark:bg-slate-950/60 dark:text-slate-100 p-5 h-48 resize-y transition-all duration-300 shadow-sm glass-card" placeholder="How can we collaborate?"></textarea>
+</div>
+<button class="mt-8 h-16 px-12 rounded-2xl bg-on-surface text-background dark:bg-slate-100 dark:text-slate-900 font-label-md text-[16px] font-bold uppercase tracking-wider hover:opacity-90 transition-all shadow-premium hover:shadow-premium-hover w-full md:w-auto self-center hover:-translate-y-1" type="submit">
+                    Send Message
+                </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 border-t border-on-surface/5 dark:border-white/5 glass-card bg-white/20 dark:bg-slate-900/30 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="font-headline-md text-title-lg font-bold text-on-surface dark:text-slate-100 tracking-tight italic">
+                Executive Portfolio
+            </div>
+<div class="font-label-sm text-[13px] text-on-surface-variant dark:text-slate-400/80">
+                © 2024 Strategic Banking Portfolio. All rights reserved. Precision &amp; Integrity.
+            </div>
+<div class="flex gap-8">
+<a class="font-label-md text-[14px] text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-slate-200 transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-label-md text-[14px] text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-slate-200 transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-label-md text-[14px] text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-slate-200 transition-colors cursor-pointer" href="#">LinkedIn</a>
+</div>
+</div>
+</footer>
+<script>
+        document.getElementById('theme-toggle').addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            const icon = document.querySelector('#theme-toggle span');
+            if (document.documentElement.classList.contains('dark')) {
+                icon.textContent = 'dark_mode';
+            } else {
+                icon.textContent = 'light_mode';
+            }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const reveals = document.querySelectorAll(".reveal");
+
+            const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            reveals.forEach(reveal => {
+                if(!reveal.classList.contains('active')) {
+                    revealOnScroll.observe(reveal);
+                }
+            });
+        });
+    </script>
+</body></html>

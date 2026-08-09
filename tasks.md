@@ -1,0 +1,23 @@
+# Portfolio Project Tasks
+
+- `[x]` Phase 1: Planning & Scaffolding
+  - `[x]` Scaffold frontend (Vite, React, TypeScript)
+  - `[x]` Configure Tailwind CSS
+  - `[x]` Scaffold backend (Node.js, Express, Nodemailer)
+- `[x]` Phase 2: Content & Data Structure
+  - `[x]` Create `portfolioData.ts` with typed content
+- `[x]` Phase 3: Implementation & UI Design
+  - `[x]` Configure Dark/Light Theme Context
+  - `[x]` Create `Preloader` component with framer-motion
+  - `[x]` Create `Header` / `Navbar` with Theme Toggle
+  - `[x]` Create `HeroSection`
+  - `[x]` Create `AboutSection` with IPMC badge
+  - `[x]` Create `ExperienceTimeline`
+  - `[x]` Create `SkillsGrid`
+  - `[x]` Create `Certifications`
+  - `[x]` Create `ContactForm` connecting to backend
+  - `[x]` Create image placeholders sections
+- `[/]` Phase 4: Browser Verification
+  - `[x]` Run dev servers
+  - `[ ]` Verify responsiveness, dark mode, animations
+  - `[ ]` Verify Nodemailer integration
