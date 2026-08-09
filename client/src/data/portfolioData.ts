@@ -16,6 +16,7 @@ export interface Experience {
   role: string;
   company: string;
   period: string;
+  description?: string;
 }
 
 export interface SkillCategory {
@@ -23,15 +24,15 @@ export interface SkillCategory {
   skills: string[];
 }
 
-import caiibPdf from '../assets/certifications and trainings/CAIIB (Retail Banking).pdf';
-import compConceptsPdf from '../assets/certifications and trainings/Computer Concepts.pdf';
-import domesticEnquiryPdf from '../assets/certifications and trainings/Domestic enquiry and disciplinary actions.pdf';
-import fiAgriPdf from '../assets/certifications and trainings/FI and Agri L 2.pdf';
-import financialRiskPdf from '../assets/certifications and trainings/Financial Risk and Regulations.pdf';
-import iimCalcuttaPdf from '../assets/certifications and trainings/IIM CALCUTTA( Banking and Financial Sector.pdf';
-import jaiibPdf from '../assets/certifications and trainings/JAIIB.pdf';
-import manipalMbaPdf from '../assets/certifications and trainings/Manipal University MBA(banking and finance).pdf';
-import riskFinancialPdf from '../assets/certifications and trainings/Risk In Financial Services L1.pdf';
+import caiibPdf from '../assets/Certifications and Trainings/CAIIB (Retail Banking).pdf';
+import compConceptsPdf from '../assets/Certifications and Trainings/Computer Concepts.pdf';
+import domesticEnquiryPdf from '../assets/Certifications and Trainings/Domestic enquiry and disciplinary actions.pdf';
+import fiAgriPdf from '../assets/Certifications and Trainings/FI and Agri L 2.pdf';
+import financialRiskPdf from '../assets/Certifications and Trainings/Financial Risk and Regulations.pdf';
+import iimCalcuttaPdf from '../assets/Certifications and Trainings/IIM CALCUTTA( Banking and Financial Sector.pdf';
+import jaiibPdf from '../assets/Certifications and Trainings/JAIIB.pdf';
+import manipalMbaPdf from '../assets/Certifications and Trainings/Manipal University MBA(banking and finance).pdf';
+import riskFinancialPdf from '../assets/Certifications and Trainings/Risk In Financial Services L1.pdf';
 
 export const educationData: Education[] = [
   { degree: 'MBA', institution: 'Manipal University', year: '2024', link: manipalMbaPdf },

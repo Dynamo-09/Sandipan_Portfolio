@@ -53,11 +53,11 @@ export const Certifications: React.FC = () => {
                   {cert.year || '20XX'}
                 </span>
                 <span className="material-symbols-outlined text-primary/40 dark:text-slate-500" style={{ fontVariationSettings: "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24" }}>
-                  {cert.degree ? 'timeline' : 'verified'}
+                  {'degree' in cert ? 'timeline' : 'verified'}
                 </span>
               </div>
               <h3 className="font-headline-md text-[24px] text-on-surface dark:text-slate-100 leading-snug relative z-10">
-                {'title' in cert ? cert.title : cert.degree} 
+                {'title' in cert ? cert.title : ('degree' in cert ? cert.degree : '')} 
                 {cert.institution ? ` - ${cert.institution}` : ''}
               </h3>
             </CardComponent>
